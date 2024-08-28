@@ -1,0 +1,65 @@
+<mvc:View
+    controllerName="com.app.yard.controller.Home"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    height="100%"
+>
+    <Page
+        id="page"
+        title="parking lot allotment"
+        class="page"
+    >
+ 
+    <html:marquee behavior="scroll" direction="Right" scrollamount="5"
+    class = "supnum">
+        Warehouse supervisor Phone Number : 9390144762😊
+    </html:marquee>
+        <headerContent>
+            <!-- <Button
+                id="showQuickView"
+                text="Company Info"
+                press="onhandleCompanyQuickViewPress"
+                ariaHasPopup="Dialog"
+            /> -->
+            <Button
+                icon="sap-icon://visits"
+                id="idbt0n1111"
+                text="Login"
+                type="Transparent"
+                press="onloginBtnClick"
+            />
+        </headerContent>
+        <content>
+            <!-- Add content here, for example, a List or other controls -->
+            <Carousel
+                id="carousel" class="sapUiContentPadding " loop="true" pageChanged="onCarouselPageChanged"
+            >
+                <Image
+                    src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/7bce77c98816ad7903aeef7a440f4bce69fc3809fa787a777325b170e98d85b7._SX540_.jpg"
+                    alt="Example picture of speakers"
+                    width="100%"
+                    height="100%"
+                />
+                <Image
+                    src="https://www.heras.co.uk/wp-content/uploads/sites/2/2021/04/heras-transport-en-logistiek-1024x671-1.jpg"
+                    alt="Example picture of USB flash drive"
+                    width="100%"
+                    height="100%"
+                />
+                <Image
+                    src="https://www.heras.co.uk/wp-content/uploads/sites/2/2021/04/heras-transport-en-logistiek-1024x671-1.jpg"
+                    alt="Example picture of spotlight"
+                    class="image"
+                    width="100%"
+                    height="100%"
+                />
+               
+           
+            </Carousel>
+           
+        </content>
+    </Page>
+</mvc:View>
+ 

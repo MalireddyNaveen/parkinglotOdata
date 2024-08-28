@@ -1,0 +1,50 @@
+{
+	"selectedKey": "page1",
+	"navigation": [
+		{
+			"title": "Analytics",
+			"key": "page1",
+			"icon":"pie-chart",
+			"visable":true
+		},
+		{
+			"title": "Parking Slot Assignment",
+			"key": "page2",
+			"icon":"add-product"
+			
+		},
+		{
+			"title": "All Slots",
+			"key": "page3",
+			"icon":"expand-all"
+		},
+		{
+			"title": "Allocated Slots",
+			"key": "page4",
+			"icon":"bbyd-active-sales"
+		},
+		
+		{
+			"title": "Empty Slots",
+			"key": "page5",
+			"icon":"action"
+		},
+		{
+			"title": "Reserved Slots",
+			"key": "page6",
+			"icon":"kpi-managing-my-area"
+		},
+		{
+			"title": "History",
+			"key": "page7",
+			"icon":"history"
+		},
+		{
+			"title": "Reserve Slot",
+			"key": "page8",
+			"icon":"add-employee"
+		}
+		
+		
+	]
+}

@@ -1,0 +1,61 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+ <Popover
+        id="idNotificationDialog"
+        resizable="true"
+        title="Notifications"
+        placement ="PreferredLeftOrFlip"
+        class="popOverClass"
+    >
+    <customHeader>
+            <Bar>
+            <contentLeft>
+            <Text text="Notifications" class="heading"></Text>
+            </contentLeft>
+                <contentRight>
+                    <Button
+                        id="cancelbtn1"
+                        icon="sap-icon://sys-cancel"
+                        press="onCloseNotification"
+                        type="Default"
+                    />
+                </contentRight>
+            </Bar>
+        </customHeader>
+		<VBox class="sapUiSmallMargin">
+		<NotificationList id="idSecurityNotify" visible="false" items="{/ZEWM_RESERVATION_NSet}">
+			<layoutData>
+				<FlexItemData maxWidth="600px" />
+			</layoutData>
+                <NotificationListItem
+                visible="{= ${Notify}? true:false}"
+                    title="{Notify}"
+                    showCloseButton="false"
+                   >
+                </NotificationListItem>
+		</NotificationList>
+        <NotificationList id="idSupervisorNotify" visible="false" items="{/ZEWM_RESERVATION_NSet}">
+			<layoutData>
+				<FlexItemData maxWidth="600px" />
+    
+			</layoutData>
+                <NotificationListItem
+                visible="{= ${Notifysuper}? true:false}"
+                    title="{Notifysuper}"
+                    showCloseButton="false"
+                   >
+                    <!-- <buttons>
+                        <Button icon="sap-icon://accept" text="Accept"  press="onAcceptPress" />
+                    </buttons>
+                    <buttons>
+                        <Button icon="sap-icon://decline" text="Reject" type="Reject"  press="onCancleIssue" />
+
+                    </buttons> -->
+                </NotificationListItem>
+                
+          
+            
+
+		</NotificationList>
+	</VBox>
+         </Popover>
+</core:FragmentDefinition>

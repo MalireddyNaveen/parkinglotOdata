@@ -1,0 +1,66 @@
+
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns:l="sap.ui.layout">
+ <Popover
+        id="idReservedSlotsPopover"
+        resizable="true"
+       titleAlignment="Center"
+        placement ="PreferredLeftOrFlip"
+        class="popOverClass"
+        
+    >
+    <customHeader>
+            <Bar>
+            <contentLeft>
+            <Text text="Reserved Slots" class="heading"></Text>
+            </contentLeft>
+                <contentRight>
+                    <Button
+                        id="allslotscancelbtn4"
+                        icon="sap-icon://sys-cancel"
+                        press="onClose4"
+                        type="Default"
+                    />
+                </contentRight>
+            </Bar>
+        </customHeader>
+       
+       <f:Card>
+        <f:content>
+              <List
+              class="sapUiContentPadding"
+                    id="idallslotsh12"
+                    
+                    backgroundDesign="Transparent"
+                     items="{
+            path: '/ZEWM_PR_PARKINGLOT_NSet',
+            filters: [{ path: 'Reserved', operator: 'EQ', value1: true }]
+            
+        }"
+                    growing="true"
+                   
+                    growingThreshold="5"
+                >
+                    <items >
+                        <CustomListItem  id="idColumnListBooksLoan2">
+                            <FlexBox justifyContent="SpaceAround">
+                    <items>
+                        <Text text="{PlotNo}"/>
+                        
+                    </items>
+                </FlexBox>
+                            
+                        </CustomListItem>
+                    </items>
+                </List>
+
+                
+        </f:content>
+    </f:Card>
+
+         </Popover>
+           
+</core:FragmentDefinition>
+ 
+ 

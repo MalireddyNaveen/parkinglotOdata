@@ -1,0 +1,83 @@
+
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+    <Dialog
+        id="idLoginnnnDialog"
+        resizable="true"
+        draggable="true"
+        contentWidth="30%"
+        title="Login"
+        class="transparentDialog"
+    >
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Text text="Login Details"></Text>
+                </contentLeft>
+                <contentRight>
+                    <Button
+                        id="cancelbtnnnnid"
+                        icon="sap-icon://decline"
+                        press="oncancelbtn"
+                        type="Transparent"
+                    />
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <content>
+            <VBox
+                class="sapUiSmallMargin"
+                alignItems="Center"
+            >
+                <form:SimpleForm
+                    id="idSimpleForm"
+                    layout="ResponsiveGridLayout"
+                >
+                    <form:content>
+                        <Title
+                            text="Login Details"
+                            textAlign="Center"
+                        />
+                        <Label
+                            text="Username"
+                            textAlign="Initial"
+                        />
+                        <Input
+                            id="user"
+                            placeholder="Enter Username"
+                            width="100%"
+                            textAlign="Initial"
+                        />
+                        <Label
+                            text="Password"
+                            textAlign="Initial"
+                        />
+                        <Input
+                            id="pwd"
+                            type="Password"
+                            placeholder="Enter Password"
+                            width="100%"
+                            textAlign="Initial"
+                        />
+                        <VBox
+                            alignItems="Center"
+                            class="sapUiSmallMarginTop"
+                        >
+                            <Button
+                                icon="sap-icon://visits"
+                                id="btn"
+                                text="Login"
+                                type="Accept"
+                                width="100%"
+                                press="onBtnClick"
+                            />
+                        </VBox>
+                    </form:content>
+                </form:SimpleForm>
+            </VBox>
+        </content>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<edmx:Edmx xmlns:sap="http://www.sap.com/Protocols/SAPData" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+
+
+<edmx:DataServices m:DataServiceVersion="2.0">
+
+
+<Schema xml:lang="en" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" sap:schema-version="1" Namespace="ZEWM_PR_PARKINGLOT_N_SRV">
+
+<Annotation xmlns="http://docs.oasis-open.org/odata/ns/edm" String="1.0.0" Term="Core.SchemaVersion"/>
+
+
+<EntityType sap:content-version="1" Name="ZEWM_PR_PARKINGLOT_N">
+
+
+<Key>
+
+<PropertyRef Name="PlotNo"/>
+
+</Key>
+
+<Property Name="Available" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Checkbox" sap:unicode="false" Nullable="false" Type="Edm.Boolean"/>
+
+<Property Name="PlotNo" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="plot number" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="10"/>
+
+<Property Name="Reserved" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Checkbox" sap:unicode="false" Nullable="false" Type="Edm.Boolean"/>
+
+<Property Name="Vehicletype" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Vehicle Type" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Processtype" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="process Type" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255" sap:quickinfo="Process type"/>
+
+</EntityType>
+
+
+<EntityType sap:content-version="1" Name="ZEWM_VEHICLE_N">
+
+
+<Key>
+
+<PropertyRef Name="Vehicalno"/>
+
+</Key>
+
+<Property Name="PLOT_NO" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="plot number" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="10"/>
+
+<Property Name="Vehicalno" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Vehicle Number" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="10"/>
+
+<Property Name="Drivername" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Driver Name" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Phone" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Phone No" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="10" sap:quickinfo="Phone Number"/>
+
+<Property Name="Vehicletype" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Vehicle Type" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Processtype" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="process Type" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255" sap:quickinfo="Process type"/>
+
+<Property Name="Assigneddate" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Assigned Date" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Unassigneddate" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Un assigned Date" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Estimatedtime" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Estimated Time" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Reserved" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Checkbox" sap:unicode="false" Nullable="false" Type="Edm.Boolean"/>
+
+</EntityType>
+
+
+<EntityType sap:content-version="1" Name="ZEWM_RESERVATION_N">
+
+
+<Key>
+
+<PropertyRef Name="Vehicalno"/>
+
+</Key>
+
+<Property Name="Vehicalno" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Vehicle Number" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Drivername" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Driver Name" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Phone" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Phone No" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="10" sap:quickinfo="Phone Number"/>
+
+<Property Name="Vehicletype" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Vehicle Type" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Processtype" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="process Type" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255" sap:quickinfo="Process type"/>
+
+<Property Name="Estimatedtime" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Estimated Time" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Notify" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="notification" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Notifysuper" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="notification" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Status" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Checkbox" sap:unicode="false" Nullable="false" Type="Edm.Boolean"/>
+
+<Property Name="PlotNo" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="plot number" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="10"/>
+
+</EntityType>
+
+
+<EntityType sap:content-version="1" Name="ZEWM_HISTORY_N">
+
+
+<Key>
+
+<PropertyRef Name="HistoryId"/>
+
+</Key>
+
+<Property Name="Vehicalno" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Vehicle Number" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="HistoryId" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="History Id" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="36"/>
+
+<Property Name="Drivername" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Driver Name" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Phone" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Phone No" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="10" sap:quickinfo="Phone Number"/>
+
+<Property Name="Vehicletype" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Vehicle Type" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Assigneddate" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Assigned Date" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Unassigneddate" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Un assigned Date" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Estimatedtime" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Estimated Time" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255"/>
+
+<Property Name="Reserved" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Reserved" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="1"/>
+
+<Property Name="Processtype" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="process Type" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="255" sap:quickinfo="Process type"/>
+
+<Property Name="PlotNo" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="plot number" sap:unicode="false" Nullable="false" Type="Edm.String" MaxLength="10"/>
+
+</EntityType>
+
+<EntityContainer Name="ZEWM_PR_PARKINGLOT_N_SRV_Entities" sap:supported-formats="atom json xlsx" m:IsDefaultEntityContainer="true">
+
+<EntitySet sap:content-version="1" Name="ZEWM_PR_PARKINGLOT_NSet" sap:updatable="false" sap:creatable="false" sap:pageable="false" sap:deletable="false" EntityType="ZEWM_PR_PARKINGLOT_N_SRV.ZEWM_PR_PARKINGLOT_N"/>
+
+<EntitySet sap:content-version="1" Name="ZEWM_VEHICLE_NSet" sap:updatable="false" sap:creatable="false" sap:pageable="false" sap:deletable="false" EntityType="ZEWM_PR_PARKINGLOT_N_SRV.ZEWM_VEHICLE_N"/>
+
+<EntitySet sap:content-version="1" Name="ZEWM_RESERVATION_NSet" sap:updatable="false" sap:creatable="false" sap:pageable="false" sap:deletable="false" EntityType="ZEWM_PR_PARKINGLOT_N_SRV.ZEWM_RESERVATION_N"/>
+
+<EntitySet sap:content-version="1" Name="ZEWM_HISTORY_NSet" sap:updatable="false" sap:creatable="false" sap:pageable="false" sap:deletable="false" EntityType="ZEWM_PR_PARKINGLOT_N_SRV.ZEWM_HISTORY_N"/>
+
+</EntityContainer>
+
+<atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://vhcalakeci.artihcus.com:50600/sap/opu/odata/sap/ZEWM_PR_PARKINGLOT_N_SRV/$metadata" rel="self"/>
+
+<atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://vhcalakeci.artihcus.com:50600/sap/opu/odata/sap/ZEWM_PR_PARKINGLOT_N_SRV/$metadata" rel="latest-version"/>
+
+</Schema>
+
+</edmx:DataServices>
+
+</edmx:Edmx>
